@@ -101,7 +101,7 @@
 
 		//Seleccion de correo y usuario (Validacion para registro de usuario)
 		public function get_cedula_correo_del_usuario($cedula, $email){
-			$coenctar = parent::conexion();
+			$conectar = parent::conexion();
 			parent::set_names();
 			$sql = "SELECT * FROM usuarios WHERE cedula=? or correo=?";
 			$sql = $conectar->prepare($sql);
